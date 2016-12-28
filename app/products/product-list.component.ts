@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { IProduct } from './product';
+
 @Component({
     moduleId: module.id,
     selector: 'pm-products',
-    templateUrl: 'product-list.component.html'
+    templateUrl: 'product-list.component.html',
+    styleUrls: ['product-list.component.css']
 })
 
 export class ProductListComponent {
