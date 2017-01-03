@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {ProductService} from "./products/product.service";
+import {ProductDetailGuard} from "./products/product-guard.service";
 
 @Component({
     selector: 'pm-app',

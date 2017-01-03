@@ -19,6 +19,7 @@ var product_filter_pipe_1 = require("./products/product-filter.pipe");
 var star_component_1 = require("./shared/star.component");
 var product_detail_component_1 = require("./products/product-detail.component");
 var welcome_component_1 = require("./home/welcome.component");
+var product_guard_service_1 = require("./products/product-guard.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -32,14 +33,15 @@ AppModule = __decorate([
             http_1.HttpModule,
             router_1.RouterModule.forRoot([
                 { path: 'products', component: product_list_component_1.ProductListComponent },
-                { path: 'products/:id', component: product_detail_component_1.ProductDetailComponent },
+                { path: 'products/:id', canActivate: [product_guard_service_1.ProductDetailGuard], component: product_detail_component_1.ProductDetailComponent },
                 { path: 'welcome', component: welcome_component_1.WelcomeComponent },
                 { path: '', redirectTo: 'welcome', pathMatch: 'full' },
                 { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
             ], { useHash: true })
         ],
         declarations: [app_component_1.AppComponent, product_list_component_1.ProductListComponent, product_filter_pipe_1.ProductFilterPipe, star_component_1.StarComponent, product_detail_component_1.ProductDetailComponent, welcome_component_1.WelcomeComponent],
-        bootstrap: [app_component_1.AppComponent]
+        bootstrap: [app_component_1.AppComponent],
+        providers: [product_guard_service_1.ProductDetailGuard]
     }),
     __metadata("design:paramtypes", [])
 ], AppModule);
