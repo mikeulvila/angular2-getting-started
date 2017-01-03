@@ -39,7 +39,7 @@ var ProductService = (function () {
     return ProductService;
 }());
 ProductService = __decorate([
-    core_1.Injectable,
+    core_1.Injectable(),
     __metadata("design:paramtypes", [])
 ], ProductService);
 exports.ProductService = ProductService;

@@ -1,7 +1,7 @@
 import {Injectable} from "@angular/core";
 import {IProduct} from "./product";
 
-@Injectable
+@Injectable()
 
 export class ProductService {
 
