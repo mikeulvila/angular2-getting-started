@@ -34,7 +34,6 @@ var ProductListComponent = (function () {
 ProductListComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
-        selector: 'pm-products',
         templateUrl: 'product-list.component.html',
         styleUrls: ['product-list.component.css']
     }),
